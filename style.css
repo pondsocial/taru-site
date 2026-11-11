@@ -1,0 +1,88 @@
+:root {
+  --background: #F5EFE4;
+  --surface: #E8DFD0;
+  --text: #2A1B1C;
+  --text-secondary: #6E5A55;
+  --primary: #6B1E2A;
+  --accent: #8C6A2E;
+  color-scheme: light dark;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #160F10;
+    --surface: #2D2022;
+    --text: #EFE6D8;
+    --text-secondary: #B5A79B;
+    --primary: #B0485A;
+    --accent: #C9A866;
+  }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--text);
+  font: 17px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+}
+
+main {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 48px 20px 64px;
+}
+
+h1, h2, .wordmark {
+  font-family: "New York", ui-serif, Georgia, serif;
+  line-height: 1.25;
+}
+
+h1 { font-size: 2rem; margin: 0 0 8px; }
+h2 { font-size: 1.3rem; margin: 40px 0 8px; }
+p, li { color: var(--text); }
+.lead { color: var(--text-secondary); font-size: 1.1rem; }
+.updated { color: var(--text-secondary); font-size: 0.9rem; }
+
+a { color: var(--primary); text-underline-offset: 3px; }
+
+header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 40px;
+}
+
+header a { display: flex; align-items: center; gap: 12px; text-decoration: none; color: var(--text); }
+.wordmark { font-size: 1.6rem; font-weight: 700; }
+
+.mark { width: 44px; height: 44px; }
+.hero .mark { width: 96px; height: 96px; }
+.mark .lit { fill: var(--primary); }
+.mark .gold { fill: var(--accent); }
+.mark .unlit { fill: var(--surface); }
+
+.hero { text-align: center; padding: 24px 0 8px; }
+.hero .wordmark { font-size: 3rem; display: block; margin: 12px 0 4px; }
+
+.card {
+  background: var(--surface);
+  border-radius: 16px;
+  padding: 16px 20px;
+  margin: 16px 0;
+}
+
+table { width: 100%; border-collapse: collapse; margin: 8px 0; }
+th, td { text-align: left; vertical-align: top; padding: 8px 8px 8px 0; border-bottom: 1px solid var(--surface); }
+th { font-weight: 600; }
+
+footer {
+  margin-top: 56px;
+  padding-top: 16px;
+  border-top: 1px solid var(--surface);
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+footer a { margin-right: 16px; }
